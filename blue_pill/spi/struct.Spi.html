@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Spi` struct in crate `blue_pill`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Spi">
+
+    <title>blue_pill::spi::Spi - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct Spi</p><div class="block items"><ul><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='../index.html'>blue_pill</a>::<wbr><a href='index.html'>spi</a></p><script>window.sidebarCurrent = {name: 'Spi', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>blue_pill</a>::<wbr><a href='index.html'>spi</a>::<wbr><a class="struct" href=''>Spi</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/blue_pill/spi.rs.html#58-60' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Spi&lt;'a, S&gt;(pub &amp;'a S)<br> <span class="where">where<br>&nbsp;&nbsp;&nbsp;&nbsp;S: <a class="trait" href="https://doc.rust-lang.org/nightly/core/any/trait.Any.html" title="trait core::any::Any">Any</a> + <a class="trait" href="../../blue_pill/spi/trait.SPI.html" title="trait blue_pill::spi::SPI">SPI</a></span>;</pre><div class='docblock'><p>Serial Peripheral Interface</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl&lt;'a, S&gt; <a class="struct" href="../../blue_pill/spi/struct.Spi.html" title="struct blue_pill::spi::Spi">Spi</a>&lt;'a, S&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;S: <a class="trait" href="https://doc.rust-lang.org/nightly/core/any/trait.Any.html" title="trait core::any::Any">Any</a> + <a class="trait" href="../../blue_pill/spi/trait.SPI.html" title="trait blue_pill::spi::SPI">SPI</a>,&nbsp;</span></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/spi.rs.html#62-177' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.init' class="method"><span id='init.v' class='invisible'><code>fn <a href='#method.init' class='fnname'>init</a>(&amp;self, afio: &amp;<a class="struct" href="../../stm32f103xx/struct.AFIO.html" title="struct stm32f103xx::AFIO">AFIO</a>, gpio: &amp;S::<a class="type" href="../../blue_pill/spi/trait.SPI.html#associatedtype.GPIO" title="type blue_pill::spi::SPI::GPIO">GPIO</a>, rcc: &amp;<a class="struct" href="../../stm32f103xx/struct.RCC.html" title="struct stm32f103xx::RCC">RCC</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/spi.rs.html#67-162' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Initializes the SPI</p>
+</div><h4 id='method.disable' class="method"><span id='disable.v' class='invisible'><code>fn <a href='#method.disable' class='fnname'>disable</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/spi.rs.html#167-169' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Disables the SPI bus</p>
+
+<p><strong>NOTE</strong> This drives the NSS pin high</p>
+</div><h4 id='method.enable' class="method"><span id='enable.v' class='invisible'><code>fn <a href='#method.enable' class='fnname'>enable</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/spi.rs.html#174-176' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Enables the SPI bus</p>
+
+<p><strong>NOTE</strong> This drives the NSS pin low</p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-Spi&lt;u8&gt;' class='impl'><span class='in-band'><code>impl&lt;'a, S&gt; <a class="trait" href="../../blue_pill/prelude/trait._embedded_hal_Spi.html" title="trait blue_pill::prelude::_embedded_hal_Spi">Spi</a>&lt;u8&gt; for <a class="struct" href="../../blue_pill/spi/struct.Spi.html" title="struct blue_pill::spi::Spi">Spi</a>&lt;'a, S&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;S: <a class="trait" href="https://doc.rust-lang.org/nightly/core/any/trait.Any.html" title="trait core::any::Any">Any</a> + <a class="trait" href="../../blue_pill/spi/trait.SPI.html" title="trait blue_pill::spi::SPI">SPI</a>,&nbsp;</span></code><a href='#impl-Spi&lt;u8&gt;' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/spi.rs.html#179-224' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Error' class="type"><span id='Error.t' class='invisible'><code>type <a href='../../blue_pill/prelude/trait._embedded_hal_Spi.html#associatedtype.Error' class="type">Error</a> = <a class="enum" href="../../blue_pill/spi/enum.Error.html" title="enum blue_pill::spi::Error">Error</a></code></span></h4>
+<div class='docblock'><p>An enumeration of SPI errors <a href="../../blue_pill/prelude/trait._embedded_hal_Spi.html#associatedtype.Error">Read more</a></p>
+</div><h4 id='method.read' class="method"><span id='read.v' class='invisible'><code>fn <a href='../../blue_pill/prelude/trait._embedded_hal_Spi.html#tymethod.read' class='fnname'>read</a>(&amp;self) -&gt; <a class="type" href="../../blue_pill/spi/type.Result.html" title="type blue_pill::spi::Result">Result</a>&lt;u8&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/spi.rs.html#185-202' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Reads the word stored in the shift register <a href="../../blue_pill/prelude/trait._embedded_hal_Spi.html#tymethod.read">Read more</a></p>
+</div><h4 id='method.send' class="method"><span id='send.v' class='invisible'><code>fn <a href='../../blue_pill/prelude/trait._embedded_hal_Spi.html#tymethod.send' class='fnname'>send</a>(&amp;self, byte: u8) -&gt; <a class="type" href="../../blue_pill/spi/type.Result.html" title="type blue_pill::spi::Result">Result</a>&lt;()&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/spi.rs.html#204-223' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Sends a word to the slave</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "blue_pill";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

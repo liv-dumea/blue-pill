@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Pwm` struct in crate `blue_pill`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Pwm">
+
+    <title>blue_pill::pwm::Pwm - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct Pwm</p><div class="block items"><ul><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='../index.html'>blue_pill</a>::<wbr><a href='index.html'>pwm</a></p><script>window.sidebarCurrent = {name: 'Pwm', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>blue_pill</a>::<wbr><a href='index.html'>pwm</a>::<wbr><a class="struct" href=''>Pwm</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/blue_pill/pwm.rs.html#45-47' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Pwm&lt;'a, T&gt;(pub &amp;'a T)<br> <span class="where">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: 'a</span>;</pre><div class='docblock'><p>PWM driver</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class="struct" href="../../blue_pill/pwm/struct.Pwm.html" title="struct blue_pill::pwm::Pwm">Pwm</a>&lt;'a, <a class="struct" href="../../stm32f103xx/struct.TIM1.html" title="struct stm32f103xx::TIM1">TIM1</a>&gt;</code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#49-156' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.init' class="method"><span id='init.v' class='invisible'><code>fn <a href='#method.init' class='fnname'>init</a>&lt;P&gt;(&amp;self, period: P, afio: &amp;<a class="struct" href="../../stm32f103xx/struct.AFIO.html" title="struct stm32f103xx::AFIO">AFIO</a>, gpioa: &amp;<a class="struct" href="../../stm32f103xx/struct.GPIOA.html" title="struct stm32f103xx::GPIOA">GPIOA</a>, rcc: &amp;<a class="struct" href="../../stm32f103xx/struct.RCC.html" title="struct stm32f103xx::RCC">RCC</a>) <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="../../blue_pill/apb2/struct.Ticks.html" title="struct blue_pill::apb2::Ticks">Ticks</a>&gt;,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#51-56' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Initializes the PWM module</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl&lt;'a, T&gt; <a class="struct" href="../../blue_pill/pwm/struct.Pwm.html" title="struct blue_pill::pwm::Pwm">Pwm</a>&lt;'a, T&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/any/trait.Any.html" title="trait core::any::Any">Any</a> + <a class="trait" href="../../blue_pill/timer/trait.TIM.html" title="trait blue_pill::timer::TIM">TIM</a>,&nbsp;</span></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#215-499' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.init-1' class="method"><span id='init.v-1' class='invisible'><code>fn <a href='#method.init-1' class='fnname'>init</a>&lt;P&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;period: P, <br>&nbsp;&nbsp;&nbsp;&nbsp;afio: &amp;<a class="struct" href="../../stm32f103xx/struct.AFIO.html" title="struct stm32f103xx::AFIO">AFIO</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;dma1: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;<a class="struct" href="../../stm32f103xx/struct.DMA1.html" title="struct stm32f103xx::DMA1">DMA1</a>&gt;, <br>&nbsp;&nbsp;&nbsp;&nbsp;gpio: &amp;T::<a class="type" href="../../blue_pill/timer/trait.TIM.html#associatedtype.GPIO" title="type blue_pill::timer::TIM::GPIO">GPIO</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;rcc: &amp;<a class="struct" href="../../stm32f103xx/struct.RCC.html" title="struct stm32f103xx::RCC">RCC</a><br>) <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="../../blue_pill/apb1/struct.Ticks.html" title="struct blue_pill::apb1::Ticks">Ticks</a>&gt;,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#220-231' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Initializes the PWM module</p>
+</div><h4 id='method.set_duties' class="method"><span id='set_duties.v' class='invisible'><code>fn <a href='#method.set_duties' class='fnname'>set_duties</a>&lt;B&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;dma1: &amp;<a class="struct" href="../../stm32f103xx/struct.DMA1.html" title="struct stm32f103xx::DMA1">DMA1</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;channel: <a class="enum" href="../../blue_pill/timer/enum.Channel.html" title="enum blue_pill::timer::Channel">Channel</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;buffer: &amp;<a class="struct" href="../../static_ref/struct.Static.html" title="struct static_ref::Static">Static</a>&lt;<a class="struct" href="../../blue_pill/dma/struct.Buffer.html" title="struct blue_pill::dma::Buffer">Buffer</a>&lt;B, <a class="struct" href="../../blue_pill/dma/struct.Dma1Channel2.html" title="struct blue_pill::dma::Dma1Channel2">Dma1Channel2</a>&gt;&gt;<br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;(), <a class="enum" href="../../blue_pill/dma/enum.Error.html" title="enum blue_pill::dma::Error">Error</a>&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;B: <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Unsize.html" title="trait core::marker::Unsize">Unsize</a>&lt;[u8]&gt;,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#461-498' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Uses <code>buffer</code> to continuously change the duty cycle on every period</p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-Pwm' class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class="trait" href="../../blue_pill/prelude/trait._embedded_hal_Pwm.html" title="trait blue_pill::prelude::_embedded_hal_Pwm">Pwm</a> for <a class="struct" href="../../blue_pill/pwm/struct.Pwm.html" title="struct blue_pill::pwm::Pwm">Pwm</a>&lt;'a, <a class="struct" href="../../stm32f103xx/struct.TIM1.html" title="struct stm32f103xx::TIM1">TIM1</a>&gt;</code><a href='#impl-Pwm' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#158-213' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Channel' class="type"><span id='Channel.t' class='invisible'><code>type <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#associatedtype.Channel' class="type">Channel</a> = <a class="enum" href="../../blue_pill/timer/enum.Channel.html" title="enum blue_pill::timer::Channel">Channel</a></code></span></h4>
+<div class='docblock'><p>Enumeration of channels that can be used with this <code>Pwm</code> interface <a href="../../blue_pill/prelude/trait._embedded_hal_Pwm.html#associatedtype.Channel">Read more</a></p>
+</div><h4 id='associatedtype.Time' class="type"><span id='Time.t' class='invisible'><code>type <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#associatedtype.Time' class="type">Time</a> = <a class="struct" href="../../blue_pill/apb2/struct.Ticks.html" title="struct blue_pill::apb2::Ticks">Ticks</a></code></span></h4>
+<div class='docblock'><p>A time unit that can be converted into a human time unit (e.g. seconds)</p>
+</div><h4 id='associatedtype.Duty' class="type"><span id='Duty.t' class='invisible'><code>type <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#associatedtype.Duty' class="type">Duty</a> = u16</code></span></h4>
+<div class='docblock'><p>Type for the <code>duty</code> methods <a href="../../blue_pill/prelude/trait._embedded_hal_Pwm.html#associatedtype.Duty">Read more</a></p>
+</div><h4 id='method.disable' class="method"><span id='disable.v' class='invisible'><code>fn <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#tymethod.disable' class='fnname'>disable</a>(&amp;self, channel: <a class="enum" href="../../blue_pill/timer/enum.Channel.html" title="enum blue_pill::timer::Channel">Channel</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#163-170' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Disables a PWM <code>channel</code></p>
+</div><h4 id='method.enable' class="method"><span id='enable.v' class='invisible'><code>fn <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#tymethod.enable' class='fnname'>enable</a>(&amp;self, channel: <a class="enum" href="../../blue_pill/timer/enum.Channel.html" title="enum blue_pill::timer::Channel">Channel</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#172-179' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Enables a PWM <code>channel</code></p>
+</div><h4 id='method.get_duty' class="method"><span id='get_duty.v' class='invisible'><code>fn <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#tymethod.get_duty' class='fnname'>get_duty</a>(&amp;self, channel: <a class="enum" href="../../blue_pill/timer/enum.Channel.html" title="enum blue_pill::timer::Channel">Channel</a>) -&gt; u16</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#181-188' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the current duty cycle</p>
+</div><h4 id='method.get_max_duty' class="method"><span id='get_max_duty.v' class='invisible'><code>fn <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#tymethod.get_max_duty' class='fnname'>get_max_duty</a>(&amp;self) -&gt; u16</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#190-192' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the maximum duty cycle value</p>
+</div><h4 id='method.get_period' class="method"><span id='get_period.v' class='invisible'><code>fn <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#tymethod.get_period' class='fnname'>get_period</a>(&amp;self) -&gt; <a class="struct" href="../../blue_pill/apb2/struct.Ticks.html" title="struct blue_pill::apb2::Ticks">Ticks</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#194-196' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the current PWM period</p>
+</div><h4 id='method.set_duty' class="method"><span id='set_duty.v' class='invisible'><code>fn <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#tymethod.set_duty' class='fnname'>set_duty</a>(&amp;self, channel: <a class="enum" href="../../blue_pill/timer/enum.Channel.html" title="enum blue_pill::timer::Channel">Channel</a>, duty: u16)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#198-205' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Sets a new duty cycle</p>
+</div><h4 id='method.set_period' class="method"><span id='set_period.v' class='invisible'><code>fn <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#tymethod.set_period' class='fnname'>set_period</a>&lt;P&gt;(&amp;self, period: P) <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="../../blue_pill/apb2/struct.Ticks.html" title="struct blue_pill::apb2::Ticks">Ticks</a>&gt;,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#207-212' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Sets a new PWM period</p>
+</div></div><h3 id='impl-Pwm-1' class='impl'><span class='in-band'><code>impl&lt;'a, T&gt; <a class="trait" href="../../blue_pill/prelude/trait._embedded_hal_Pwm.html" title="trait blue_pill::prelude::_embedded_hal_Pwm">Pwm</a> for <a class="struct" href="../../blue_pill/pwm/struct.Pwm.html" title="struct blue_pill::pwm::Pwm">Pwm</a>&lt;'a, T&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/any/trait.Any.html" title="trait core::any::Any">Any</a> + <a class="trait" href="../../blue_pill/timer/trait.TIM.html" title="trait blue_pill::timer::TIM">TIM</a>,&nbsp;</span></code><a href='#impl-Pwm-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#501-559' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Channel-1' class="type"><span id='Channel.t-1' class='invisible'><code>type <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#associatedtype.Channel' class="type">Channel</a> = <a class="enum" href="../../blue_pill/timer/enum.Channel.html" title="enum blue_pill::timer::Channel">Channel</a></code></span></h4>
+<div class='docblock'><p>Enumeration of channels that can be used with this <code>Pwm</code> interface <a href="../../blue_pill/prelude/trait._embedded_hal_Pwm.html#associatedtype.Channel">Read more</a></p>
+</div><h4 id='associatedtype.Duty-1' class="type"><span id='Duty.t-1' class='invisible'><code>type <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#associatedtype.Duty' class="type">Duty</a> = u16</code></span></h4>
+<div class='docblock'><p>Type for the <code>duty</code> methods <a href="../../blue_pill/prelude/trait._embedded_hal_Pwm.html#associatedtype.Duty">Read more</a></p>
+</div><h4 id='associatedtype.Time-1' class="type"><span id='Time.t-1' class='invisible'><code>type <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#associatedtype.Time' class="type">Time</a> = <a class="struct" href="../../blue_pill/apb1/struct.Ticks.html" title="struct blue_pill::apb1::Ticks">Ticks</a></code></span></h4>
+<div class='docblock'><p>A time unit that can be converted into a human time unit (e.g. seconds)</p>
+</div><h4 id='method.get_duty-1' class="method"><span id='get_duty.v-1' class='invisible'><code>fn <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#tymethod.get_duty' class='fnname'>get_duty</a>(&amp;self, channel: <a class="enum" href="../../blue_pill/timer/enum.Channel.html" title="enum blue_pill::timer::Channel">Channel</a>) -&gt; u16</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#509-516' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the current duty cycle</p>
+</div><h4 id='method.disable-1' class="method"><span id='disable.v-1' class='invisible'><code>fn <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#tymethod.disable' class='fnname'>disable</a>(&amp;self, channel: <a class="enum" href="../../blue_pill/timer/enum.Channel.html" title="enum blue_pill::timer::Channel">Channel</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#518-525' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Disables a PWM <code>channel</code></p>
+</div><h4 id='method.enable-1' class="method"><span id='enable.v-1' class='invisible'><code>fn <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#tymethod.enable' class='fnname'>enable</a>(&amp;self, channel: <a class="enum" href="../../blue_pill/timer/enum.Channel.html" title="enum blue_pill::timer::Channel">Channel</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#527-534' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Enables a PWM <code>channel</code></p>
+</div><h4 id='method.get_max_duty-1' class="method"><span id='get_max_duty.v-1' class='invisible'><code>fn <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#tymethod.get_max_duty' class='fnname'>get_max_duty</a>(&amp;self) -&gt; u16</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#536-538' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the maximum duty cycle value</p>
+</div><h4 id='method.get_period-1' class="method"><span id='get_period.v-1' class='invisible'><code>fn <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#tymethod.get_period' class='fnname'>get_period</a>(&amp;self) -&gt; <a class="struct" href="../../blue_pill/apb1/struct.Ticks.html" title="struct blue_pill::apb1::Ticks">Ticks</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#540-542' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the current PWM period</p>
+</div><h4 id='method.set_duty-1' class="method"><span id='set_duty.v-1' class='invisible'><code>fn <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#tymethod.set_duty' class='fnname'>set_duty</a>(&amp;self, channel: <a class="enum" href="../../blue_pill/timer/enum.Channel.html" title="enum blue_pill::timer::Channel">Channel</a>, duty: u16)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#544-551' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Sets a new duty cycle</p>
+</div><h4 id='method.set_period-1' class="method"><span id='set_period.v-1' class='invisible'><code>fn <a href='../../blue_pill/prelude/trait._embedded_hal_Pwm.html#tymethod.set_period' class='fnname'>set_period</a>&lt;P&gt;(&amp;self, period: P) <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="../../blue_pill/apb1/struct.Ticks.html" title="struct blue_pill::apb1::Ticks">Ticks</a>&gt;,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/blue_pill/pwm.rs.html#553-558' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Sets a new PWM period</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "blue_pill";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

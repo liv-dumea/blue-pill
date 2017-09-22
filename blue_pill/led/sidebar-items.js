@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["init","Initializes the user LED"]],"struct":[["PC13","LED connected to pin PC13"]]});

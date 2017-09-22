@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["RtcClkSource","RTC clock source"],["RtcEvent","RTC interrupt event"]],"struct":[["Rtc","RTC"]]});

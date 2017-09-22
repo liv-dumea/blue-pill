@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Error","SPI error"]],"struct":[["Spi","Serial Peripheral Interface"]],"trait":[["SPI","SPI instance that can be used with the `Spi` abstraction"]],"type":[["Result","SPI result"]]});

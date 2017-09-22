@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["init","Initializes the digital outputs"]],"struct":[["PB12","Digital output"],["PB13","Digital output"],["PB14","Digital output"],["PB15","Digital output"]]});
