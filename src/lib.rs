@@ -39,6 +39,9 @@ pub mod serial;
 pub mod spi;
 pub mod time;
 pub mod timer;
+pub mod ir_capture;
+pub mod ir_dec_nec;
+
 pub use hal::prelude;
 
 pub use capture::Capture;
@@ -48,6 +51,7 @@ pub use rtc::Rtc;
 pub use serial::Serial;
 pub use spi::Spi;
 pub use timer::{Channel, Timer};
+pub use ir_capture::{IrCapture, LevelState, IrCaptureEvent};
 
 macro_rules! frequency {
     ($FREQUENCY:expr) => {
