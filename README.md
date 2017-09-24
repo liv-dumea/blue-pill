@@ -21,3 +21,17 @@ at your option.
 Unless you explicitly state otherwise, any contribution intentionally submitted
 for inclusion in the work by you, as defined in the Apache-2.0 license, shall be
 dual licensed as above, without any additional terms or conditions.
+
+
+### Extra:
+
+infrared NEC decoding example using capture timer interrupts on input edge detection
+
+Docs:
+[NEC protocol](http://techdocs.altium.com/display/FPGA/NEC+Infrared+Transmission+Protocol)
+
+Resources:
+[IR receptor](https://www.optimusdigital.ro/en/index.php?controller=attachment&id_attachment=240)
+[IR NEC remote codes](https://static.optimusdigital.ro/41-thickbox_default/mini-telecomanda.jpg)
+[HC-05 blutooth module](https://www.itead.cc/wiki/Serial_Port_Bluetooth_Module_(Master/Slave)_:_HC-05)
+
